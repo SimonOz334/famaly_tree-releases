@@ -11,7 +11,7 @@
 | Windows 10 или Windows 11 | Для запуска программы и установщика |
 | .NET Framework 4.x | Компонент входит в Windows 10 и Windows 11. Если Windows просит установить или обновить его, см. [инструкцию Microsoft](https://learn.microsoft.com/ru-ru/dotnet/framework/install/on-windows-10) |
 | Интернет | Нужен для установки и проверки обновлений. Дерево можно открывать и редактировать без сети |
-| Свободное место | Установщик и приложение версии 1.1.0 вместе занимают около 200 КБ. Размер самого дерева зависит от количества записей и фотографий |
+| Свободное место | Установщик и приложение версии 1.1.1 вместе занимают около 200 КБ. Размер самого дерева зависит от количества записей и фотографий |
 
 Для установки подходят права обычного пользователя. Аккаунт GitHub не требуется.
 
@@ -25,7 +25,7 @@
 
 ## Если Windows показывает «Система Windows защитила ваш компьютер»
 
-Это предупреждение Microsoft Defender SmartScreen. Он проверяет репутацию загруженного файла и его издателя. Файлы версии **1.1.0** опубликованы без цифровой подписи, поэтому SmartScreen может показать это окно при запуске. [Как работает SmartScreen](https://learn.microsoft.com/ru-ru/windows/apps/package-and-deploy/smartscreen-reputation)
+Это предупреждение Microsoft Defender SmartScreen. Он проверяет репутацию загруженного файла и его издателя. Файлы версии **1.1.1** опубликованы без цифровой подписи, поэтому SmartScreen может показать это окно при запуске. [Как работает SmartScreen](https://learn.microsoft.com/ru-ru/windows/apps/package-and-deploy/smartscreen-reputation)
 
 1. Убедитесь, что файл скачан с [официальной страницы релизов «Корни»](https://github.com/SimonOz334/famaly_tree-releases/releases).
 2. Проверьте контрольную сумму SHA‑256. Для установщика в папке «Загрузки» откройте PowerShell и выполните команду. Если файл лежит в другом месте, подставьте его путь. [Справка Get-FileHash](https://learn.microsoft.com/ru-ru/powershell/module/microsoft.powershell.utility/get-filehash)
@@ -36,12 +36,12 @@
 
 3. Сравните значение **Hash** с таблицей. Совпадение означает, что файл идентичен опубликованному в релизе.
 
-**Контрольные суммы [релиза v1.1.0](https://github.com/SimonOz334/famaly_tree-releases/releases/tag/v1.1.0)**
+**Контрольные суммы [релиза v1.1.1](https://github.com/SimonOz334/famaly_tree-releases/releases/tag/v1.1.1)**
 
 | Файл | SHA‑256 |
 | --- | --- |
-| [FamilyTreeSetup.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.1.0/FamilyTreeSetup.exe) | `79d3bdf4b8b2012d67516aabbf4459fd3c773cfbb0daadacf1111422c6e94fcc` |
-| [FamilyTree.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.1.0/FamilyTree.exe) | `b1ca29963ec0f31ee659c4b6a39aadf22fdb403e470e3be5ec305f3871ac28ab` |
+| [FamilyTreeSetup.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.1.1/FamilyTreeSetup.exe) | `35fdd3aa7372de0c7c14b2eea9db6e43eb500cfee124d61742d012a01988d664` |
+| [FamilyTree.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.1.1/FamilyTree.exe) | `2ac2a941e5e332b29f175a3f0b2e2cba7b0f61b9ef3dc57ecce80d653e982a74` |
 
 Если сумма совпала и вы доверяете источнику, в окне SmartScreen нажмите **«Подробнее»**, затем **«Выполнить в любом случае»**, если Windows показывает эту кнопку. [Рекомендации Microsoft для первого запуска](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/publish-first-app#step-6-handle-smartscreen-for-new-apps)
 
