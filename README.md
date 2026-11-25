@@ -10,8 +10,8 @@
 | --- | --- |
 | Windows 10 или Windows 11 | Для запуска программы и установщика |
 | .NET Framework 4.x | Компонент входит в Windows 10 и Windows 11. Если Windows просит установить или обновить его, см. [инструкцию Microsoft](https://learn.microsoft.com/ru-ru/dotnet/framework/install/on-windows-10) |
-| Интернет | Установщик скачивает приложение с GitHub. После установки интернет не нужен |
-| Свободное место | Установщик и приложение версии 1.0.0 вместе занимают меньше 200 КБ. Размер самого дерева зависит от количества записей и фотографий |
+| Интернет | Нужен для установки и проверки обновлений. Дерево можно открывать и редактировать без сети |
+| Свободное место | Установщик и приложение версии 1.1.0 вместе занимают около 200 КБ. Размер самого дерева зависит от количества записей и фотографий |
 
 Для установки подходят права обычного пользователя. Аккаунт GitHub не требуется.
 
@@ -25,7 +25,7 @@
 
 ## Если Windows показывает «Система Windows защитила ваш компьютер»
 
-Это предупреждение Microsoft Defender SmartScreen. Он проверяет репутацию загруженного файла и его издателя. Файлы версии **1.0.0** опубликованы без цифровой подписи, поэтому SmartScreen может показать это окно при запуске. [Как работает SmartScreen](https://learn.microsoft.com/ru-ru/windows/apps/package-and-deploy/smartscreen-reputation)
+Это предупреждение Microsoft Defender SmartScreen. Он проверяет репутацию загруженного файла и его издателя. Файлы версии **1.1.0** опубликованы без цифровой подписи, поэтому SmartScreen может показать это окно при запуске. [Как работает SmartScreen](https://learn.microsoft.com/ru-ru/windows/apps/package-and-deploy/smartscreen-reputation)
 
 1. Убедитесь, что файл скачан с [официальной страницы релизов «Корни»](https://github.com/SimonOz334/famaly_tree-releases/releases).
 2. Проверьте контрольную сумму SHA‑256. Для установщика в папке «Загрузки» откройте PowerShell и выполните команду. Если файл лежит в другом месте, подставьте его путь. [Справка Get-FileHash](https://learn.microsoft.com/ru-ru/powershell/module/microsoft.powershell.utility/get-filehash)
@@ -36,12 +36,12 @@
 
 3. Сравните значение **Hash** с таблицей. Совпадение означает, что файл идентичен опубликованному в релизе.
 
-**Контрольные суммы [релиза v1.0.0](https://github.com/SimonOz334/famaly_tree-releases/releases/tag/v1.0.0)**
+**Контрольные суммы [релиза v1.1.0](https://github.com/SimonOz334/famaly_tree-releases/releases/tag/v1.1.0)**
 
 | Файл | SHA‑256 |
 | --- | --- |
-| [FamilyTreeSetup.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.0.0/FamilyTreeSetup.exe) | `7167149a967829e480f5c9b494697aab4512f437adc90d55314db86712269ebc` |
-| [FamilyTree.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.0.0/FamilyTree.exe) | `4ac3a69604a00b57b291cf68ce3204abdcaadb8f0a9152b9bb88a58af01dbbf2` |
+| [FamilyTreeSetup.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.1.0/FamilyTreeSetup.exe) | `79d3bdf4b8b2012d67516aabbf4459fd3c773cfbb0daadacf1111422c6e94fcc` |
+| [FamilyTree.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.1.0/FamilyTree.exe) | `b1ca29963ec0f31ee659c4b6a39aadf22fdb403e470e3be5ec305f3871ac28ab` |
 
 Если сумма совпала и вы доверяете источнику, в окне SmartScreen нажмите **«Подробнее»**, затем **«Выполнить в любом случае»**, если Windows показывает эту кнопку. [Рекомендации Microsoft для первого запуска](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/publish-first-app#step-6-handle-smartscreen-for-new-apps)
 
@@ -55,6 +55,14 @@
 - **Перемещать дерево.** Перетаскивайте фон. Колесо меняет масштаб, а **«Уместить»** возвращает общий вид.
 
 Если известна только одна дата, на месте второй стоит **…**. Когда обе даты неизвестны, карточка показывает **«Нет данных»**. Возраст отображается, когда его можно рассчитать.
+
+## Обновления
+
+- Для ручной проверки откройте **Данные → Проверить обновления**. Номер установленной версии виден в том же меню.
+- Автопроверка выполняется при запуске и каждые 6 часов, пока открыто приложение. Её можно отключить пунктом **Данные → Автопроверка обновлений**.
+- Если есть новая версия, внизу появится кнопка **«Обновление»** с её номером. Кнопка откроет релиз на GitHub.
+
+Чтобы обновить установленную программу, скачайте новый **FamilyTreeSetup.exe**, закройте «Корни» и запустите установщик. Семейное дерево остаётся в той же папке. Если у вас версия **1.0.0**, один раз скачайте новый установщик по ссылке в начале страницы, чтобы в приложении появилась проверка обновлений.
 
 ## Данные и резервные копии
 
