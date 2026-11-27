@@ -11,7 +11,7 @@
 | Windows 10 или Windows 11 | Для запуска программы и установщика |
 | .NET Framework 4.x | Компонент входит в Windows 10 и Windows 11. Если Windows просит установить или обновить его, см. [инструкцию Microsoft](https://learn.microsoft.com/ru-ru/dotnet/framework/install/on-windows-10) |
 | Интернет | Нужен для установки, проверки и скачивания обновлений. Дерево можно открывать и редактировать без сети |
-| Свободное место | Установщик и приложение версии 1.3.0 вместе занимают около 310 КБ. Размер самого дерева зависит от количества записей и фотографий |
+| Свободное место | Установщик и приложение версии 1.3.1 вместе занимают около 310 КБ. Размер самого дерева зависит от количества записей и фотографий |
 
 Для установки подходят права обычного пользователя. Аккаунт GitHub не требуется.
 
@@ -25,7 +25,7 @@
 
 ## Если Windows показывает «Система Windows защитила ваш компьютер»
 
-Это предупреждение Microsoft Defender SmartScreen. Он проверяет репутацию загруженного файла и его издателя. Файлы версии **1.3.0** опубликованы без цифровой подписи, поэтому SmartScreen может показать это окно при запуске. [Как работает SmartScreen](https://learn.microsoft.com/ru-ru/windows/apps/package-and-deploy/smartscreen-reputation)
+Это предупреждение Microsoft Defender SmartScreen. Он проверяет репутацию загруженного файла и его издателя. Файлы версии **1.3.1** опубликованы без цифровой подписи, поэтому SmartScreen может показать это окно при запуске. [Как работает SmartScreen](https://learn.microsoft.com/ru-ru/windows/apps/package-and-deploy/smartscreen-reputation)
 
 1. Убедитесь, что файл скачан с [официальной страницы релизов «Корни»](https://github.com/SimonOz334/famaly_tree-releases/releases).
 2. Проверьте контрольную сумму SHA‑256. Для установщика в папке «Загрузки» откройте PowerShell и выполните команду. Если файл лежит в другом месте, подставьте его путь. [Справка Get-FileHash](https://learn.microsoft.com/ru-ru/powershell/module/microsoft.powershell.utility/get-filehash)
@@ -36,12 +36,12 @@
 
 3. Сравните значение **Hash** с таблицей. Совпадение означает, что файл идентичен опубликованному в релизе.
 
-**Контрольные суммы [релиза v1.3.0](https://github.com/SimonOz334/famaly_tree-releases/releases/tag/v1.3.0)**
+**Контрольные суммы [релиза v1.3.1](https://github.com/SimonOz334/famaly_tree-releases/releases/tag/v1.3.1)**
 
 | Файл | SHA‑256 |
 | --- | --- |
-| [FamilyTreeSetup.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.3.0/FamilyTreeSetup.exe) | `21f3edc25f4b8b5232aefd60121b0e2770523c96ba930e14d1c6350d4bdb5146` |
-| [FamilyTree.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.3.0/FamilyTree.exe) | `1b78c9e9ebc0991901df0d650cd1ee151ca6948bdf7d722725abcd2512651ed5` |
+| [FamilyTreeSetup.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.3.1/FamilyTreeSetup.exe) | `2403d8e8099a3d058e43eda44f253d149b0b7cf47232503b7e421b8b30a10420` |
+| [FamilyTree.exe](https://github.com/SimonOz334/famaly_tree-releases/releases/download/v1.3.1/FamilyTree.exe) | `20072a8060ac10fedd0a73a678adf1f2ecdb2066b52e475968bffb1363316bcf` |
 
 Если сумма совпала и вы доверяете источнику, в окне SmartScreen нажмите **«Подробнее»**, затем **«Выполнить в любом случае»**, если Windows показывает эту кнопку. [Рекомендации Microsoft для первого запуска](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/publish-first-app#step-6-handle-smartscreen-for-new-apps)
 
@@ -63,6 +63,7 @@
 - **Сохранить схему.** Откройте **Данные → Сохранить схему как PNG**. В изображение войдут все карточки открытого вида, включая карточки за краем окна. Файл можно распечатать или отправить как изображение.
 - **Открыть подробности.** Нажмите **«Карточка»** на панели над схемой. Справа появятся данные выбранного человека и список его родственников. Нажмите на имя родственника, чтобы перейти к нему.
 - **Перемещать дерево.** Перетаскивайте фон. Колесо меняет масштаб, а **«Уместить»** возвращает общий вид.
+- **Переставить карточки в ряду.** Зажмите саму карточку и потяните влево или вправо. Отпустите её у зелёной отметки в промежутке для вставки или на середине другой карточки для обмена местами. Нажмите **Esc**, чтобы отменить перетаскивание. Новый порядок сохраняется в дереве, линии перестраиваются автоматически.
 
 Если известна только одна дата, на месте второй стоит **…**. Когда обе даты неизвестны, карточка показывает **«Нет данных»**. Возраст отображается, когда его можно рассчитать.
 
